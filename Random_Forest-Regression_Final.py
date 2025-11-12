@@ -54,7 +54,7 @@ def load_and_prepare_data(file_path, target_column="arrival_delay_min"):
         leak_cols = ["arrival_delay", "arrival_delay_min", "departure_delay", "departure_delay_min"]
     leak_cols = [c for c in leak_cols if c in X.columns]
     if leak_cols:
-        print(f"🛡️ Dropping leakage columns: {leak_cols}")
+        print(f" Dropping leakage columns: {leak_cols}")
         X = X.drop(columns=leak_cols)
 
     # ---- Encode 3 string categoricals into ONE integer column each (no one-hot) ----
