@@ -138,6 +138,6 @@ print(f"Filtered out {before - after} rows missing schedule fields. Kept {after}
 
 # ---------- Save ----------
 strict.to_csv(OUTPUT_FILE, index=False)
-print(f"✅ Saved -> {OUTPUT_FILE}")
+print(f" Saved -> {OUTPUT_FILE}")
 
 
