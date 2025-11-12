@@ -69,7 +69,7 @@ def load_and_prepare_data(file_path, delay_target="departure_delay"):
     other_label = "arrival_delay" if delay_target == "departure_delay" else "departure_delay"
     leakage_cols = [c for c in always_leak + [other_label] if c in X.columns]
     if leakage_cols:
-        print(f"🛡️ Dropping leakage columns: {leakage_cols}")
+        print(f" Dropping leakage columns: {leakage_cols}")
         X = X.drop(columns=leakage_cols)
 
     # --- Ordinal-encode the 3 categoricals into single integer columns ---
